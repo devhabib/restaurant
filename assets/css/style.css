@@ -374,6 +374,7 @@ clip-path: polygon(0% 0%, 100% 0, 100% 50%, 100% 100%, 0% 100%);
     border: 1px solid #ddd;
     border-radius: 5px;
     margin-bottom: 25px;
+    height: 250px;
 }
 .special_item {
     border-radius: 5px;
