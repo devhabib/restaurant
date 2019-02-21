@@ -24,7 +24,7 @@
 
 		// Type it
 		new TypeIt('.type-it', {
-		    strings: 'serve fresh food',
+		    strings: ["This will be typed!", "And this will be typed too."],
 		    loop: true
 		});
 
