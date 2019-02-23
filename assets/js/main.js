@@ -3,6 +3,13 @@
 
 	jQuery(document).ready(function ($) {
 		new WOW().init();
+		// Magnific Popup starts
+		$('.image-popup').magnificPopup({
+			type: 'image',
+			gallery: {
+					enabled: true
+				}
+		})
 
 		// Owl carousel
 		$('.special_menu').owlCarousel({
@@ -22,12 +29,6 @@
 		// SlickNav
 		$('#menu').slicknav();
 
-		// Type it
-		new TypeIt('.type-it', {
-		    strings: ["This will be typed!", "And this will be typed too."],
-		    loop: true
-		});
-
 	});
 
 
@@ -42,4 +43,17 @@
 			}
 		});
 	});
+
+	// Typed js
+
+	var typed = new Typed('#typed', {
+    strings: ["serve best food","are the best"],
+    loop: true,
+    typeSpeed: 50,
+    backSpeed: 20,
+    startDelay: 500,
+    cursorChar: '_',
+    smartBackspace: true
+  });
+// Typed js ends
 }(jQuery));

@@ -71,7 +71,7 @@ header {
 }
 /*Slick Nav starts*/
 .slicknav_menu {
-    background: #192a56;
+    background: #333;
     display: none;
 }
 .slicknav_nav li a {
@@ -81,6 +81,14 @@ header {
 }
 .slicknav_menu a {
     color: #fff;
+}
+.slicknav_nav a{
+    -webkit-transition:.3s;
+    transition: .3s;
+}
+.slicknav_nav a:hover{
+    color: #F63854;
+    text-decoration: none;
 }
 /*Slick Nav for mobile*/
 .sticky {
@@ -838,4 +846,47 @@ section .section-title {
     border-radius: 50%;
 }
 /*About ends*/
+
+/*Gallery Starts*/
+a.image-popup {
+    display: block;
+    position: relative;
+    transition: .3s;
+    overflow: hidden;
+    margin-bottom: 45px;
+}
+a.image-popup img {
+    width: 100%;
+    height: 250px;
+}
+a.image-popup::before {
+    left: -50%;
+    top: 0;
+}
+
+a.image-popup::after {
+    right: -50%;
+    top: 0;
+}
+a.image-popup::before, a.image-popup::after {
+    position: absolute;
+    content: "";
+    width: 50%;
+    height: 100%;
+    background-color: #ddd;
+    opacity: .8;
+    transition: .3s;
+}
+a.image-popup:hover {
+    cursor: crosshair;
+}
+a.image-popup:hover::before {
+    left: 0;
+    cursor: crosshair;
+}
+a.image-popup:hover::after {
+    right: 0;
+    cursor: crosshair;
+}
+/*Gallery Ends*/
 /*Other pages Ends*/
