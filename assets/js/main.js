@@ -16,13 +16,36 @@
 			items: 3,
 			loop:true,
 			autoplay:true,
-			dots: true
+			dots: true,
+			responsive: {
+				992:{
+					items: 2
+				},
+				768:{
+					items: 2
+				},
+				320:{
+					items: 1
+				}
+			}
 		});
+
 		$('.customer_carousel').owlCarousel({
 			items: 2,
 			loop:true,
 			autoplay:true,
-			dots: true
+			dots: true,
+			responsive: {
+				992:{
+					items: 2
+				},
+				768:{
+					items: 2
+				},
+				320:{
+					items: 1
+				}
+			}
 		});
 		// Owl Carousel ends
 

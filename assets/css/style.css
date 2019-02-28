@@ -140,12 +140,13 @@ nav ul li a:hover{
     position: relative;
     z-index: 1;
 }
-#home::before {
+#home:before {
     position: absolute;
     content: '';
     opacity: 0.6;
+    -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=60)";
     width: 100%;
-    height: 100vh;
+    height: 100%;
     z-index: -1;
     background-image: url("../images/background/overlay.png");
     background-color: #1B1464;
@@ -156,7 +157,9 @@ nav ul li a:hover{
     position: absolute;
     left: 50%;
     top: 50%;
-    transform: translate(-50%,-50%);
+    -webkit-transform: translate(-50%,-50%);
+            transform: translate(-50%,-50%);
+    width: 100%;
 }
 .home_content p {
     font-family: "Oleo Script";
@@ -177,6 +180,7 @@ nav ul li a:hover{
 .btn.btn-danger {
     background: #c0392b;
     border: 1px solid #c0392b;
+    -webkit-transition:.3s;
     transition: .3s;
     position: relative;
     z-index: 1;
@@ -188,7 +192,7 @@ nav ul li a:hover{
 .home_content .btn.btn-danger{
     margin: 10px;
 }
-.btn.btn-danger::before {
+.btn.btn-danger:before {
     position: absolute;
     content: '';
     background: #e74c3c;
@@ -196,6 +200,7 @@ nav ul li a:hover{
     height: 100%;
     left: -100%;
     top: 100%;
+    -webkit-transition:.3s;
     transition: .3s;
     z-index: -1;
 }
@@ -208,7 +213,7 @@ nav ul li a:hover{
 #about{
     position: relative;
 }
-.about_bg::before {
+.about_bg:before {
     position: absolute;
     content: '';
     background-image: url('../images/about/about.jpg');
@@ -244,7 +249,7 @@ nav ul li a:hover{
     position: relative;
     text-transform: capitalize;
 }
-.page_title h1::before {
+.page_title h1:before {
     background: #c0392b;
     width: 70px;
     height: 2px;
@@ -252,9 +257,10 @@ nav ul li a:hover{
     content: '';
     top: 90%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
 }
-.page_title h1::after {
+.page_title h1:after {
     position: absolute;
     content: '';
     background: #fbc531;
@@ -262,7 +268,8 @@ nav ul li a:hover{
     height: 2px;
     top: 90%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
 }
 .about_content p {
     font-weight: 300;
@@ -278,6 +285,7 @@ nav ul li a:hover{
     display: inline-block;
 }
 .nav-tabs .nav-link{
+    -webkit-transition:.3s;
     transition: .3s;
 }
 .nav-tabs .nav-link.active {
@@ -289,7 +297,6 @@ nav ul li a:hover{
 }
 .nav-link {
     color: #000;
-    border-bottom: ;
 }
 .nav-tabs .nav-link:hover {
     background: #c0392b;
@@ -299,6 +306,7 @@ nav ul li a:hover{
 .single_menu {
     position: relative;
     margin-bottom: 75px;
+    -webkit-transition:.3s;
     transition: .3s;
 }
 .single_menu:hover img{
@@ -312,6 +320,7 @@ clip-path: polygon(0% 0%, 100% 0, 100% 50%, 100% 100%, 0% 100%);
     height: 140px;
     -webkit-clip-path: polygon(0% 0%, 75% 0%, 100% 50%, 75% 100%, 0% 100%);
     clip-path: polygon(0% 0%, 75% 0%, 100% 50%, 75% 100%, 0% 100%);
+    -webkit-transition:.3s;
     transition: .3s;
     border: 1px solid #ddd;
     border-radius: 5px;
@@ -364,6 +373,7 @@ clip-path: polygon(0% 0%, 100% 0, 100% 50%, 100% 100%, 0% 100%);
     width: 100%;
     height: 100%;
     opacity: 0.7;
+    -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=70)";
     z-index: -1;
     top: 0;
 }
@@ -396,6 +406,7 @@ clip-path: polygon(0% 0%, 100% 0, 100% 50%, 100% 100%, 0% 100%);
 }
 .special_item {
     border-radius: 5px;
+    -webkit-transition:.3s;
     transition: .3s;
     margin-right: 15px;
 }
@@ -433,6 +444,7 @@ clip-path: polygon(0% 0%, 100% 0, 100% 50%, 100% 100%, 0% 100%);
     top: 0;
     left: 0;
     opacity: 0.7;
+    -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=70)";
 }
 .single_customer {
     position: relative;
@@ -530,6 +542,7 @@ clip-path: polygon(0% 0%, 100% 0, 100% 50%, 100% 100%, 0% 100%);
     color: #fff;
     padding-left: 10px;
     font-weight: 600;
+    -webkit-transition:.3s;
     transition: .3s;
 }
 .contact_footer_contact p a:hover {
@@ -545,7 +558,7 @@ footer {
     background-size: cover;
 
 }
-footer::before {
+footer:before {
     position: absolute;
     content: '';
     background-color: #1B1464;
@@ -556,10 +569,10 @@ footer::before {
     top: 0;
     left: 0;
     opacity: 0.7;
+    -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=70)";
 }
 footer .container {
     border-bottom: 1px solid #fff;
-    z-index: ;
 }
 footer .logo {
     padding-top: 0;
@@ -580,6 +593,7 @@ footer .logo a img {
 }
 .footer_items ul li a {
     color: #fff;
+    -webkit-transition:.3s;
     transition: .3s;
 }
 .footer_items ul li a:hover {
@@ -592,7 +606,6 @@ footer .logo a img {
 .footer_items ul li span {
     color: #fff;
     font-size: 18px;
-    padding-right: ;
 }
 .contact-link li {
     color: #fff;
@@ -665,6 +678,7 @@ footer .logo a img {
     color: #fff;
     text-transform: capitalize;
     font-weight: 300;
+    float: right;
 }
 /*Footer ends*/
 
@@ -681,10 +695,11 @@ footer .logo a img {
     position: relative;
     z-index: 1;
 }
-#others::before {
+#others:before {
     position: absolute;
     content: '';
     opacity: 0.6;
+    -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=60)";
     width: 100%;
     height: 100%;
     z-index: -1;
@@ -696,7 +711,8 @@ footer .logo a img {
 .others_home {
     position: absolute;
     top: 50%;
-    transform: translate(0,-50%);
+    -webkit-transform: translate(0,-50%);
+            transform: translate(0,-50%);
 }
 .others_home h2{
     margin-bottom: 0;
@@ -714,7 +730,6 @@ footer .logo a img {
 }
 /* FontAwesome for working BootSnippet :> */
 
-@import url('https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
 #team {
     background: #eee !important;
 }
@@ -733,11 +748,7 @@ footer .logo a img {
     border-color: #007b5e;
 }
 
-section {
-    padding: 60px 0;
-}
-
-section .section-title {
+.section-title {
     text-align: center;
     color: #007b5e;
     margin-bottom: 50px;
@@ -752,9 +763,6 @@ section .section-title {
 .image-flip:hover .backside,
 .image-flip.hover .backside {
     -webkit-transform: rotateY(0deg);
-    -moz-transform: rotateY(0deg);
-    -o-transform: rotateY(0deg);
-    -ms-transform: rotateY(0deg);
     transform: rotateY(0deg);
     border-radius: .25rem;
 }
@@ -762,8 +770,6 @@ section .section-title {
 .image-flip:hover .frontside,
 .image-flip.hover .frontside {
     -webkit-transform: rotateY(180deg);
-    -moz-transform: rotateY(180deg);
-    -o-transform: rotateY(180deg);
     transform: rotateY(180deg);
 }
 
@@ -794,20 +800,13 @@ section .section-title {
     left: 0;
     background: white;
     -webkit-transform: rotateY(-180deg);
-    -moz-transform: rotateY(-180deg);
-    -o-transform: rotateY(-180deg);
-    -ms-transform: rotateY(-180deg);
     transform: rotateY(-180deg);
-    -webkit-box-shadow: 5px 7px 9px -4px rgb(158, 158, 158);
-    -moz-box-shadow: 5px 7px 9px -4px rgb(158, 158, 158);
     box-shadow: 5px 7px 9px -4px rgb(158, 158, 158);
 }
 
 .frontside,
 .backside {
     -webkit-backface-visibility: hidden;
-    -moz-backface-visibility: hidden;
-    -ms-backface-visibility: hidden;
     backface-visibility: hidden;
     -webkit-transition: 1s;
     -webkit-transform-style: preserve-3d;
@@ -851,6 +850,7 @@ section .section-title {
 a.image-popup {
     display: block;
     position: relative;
+    -webkit-transition:.3s;
     transition: .3s;
     overflow: hidden;
     margin-bottom: 45px;
@@ -859,32 +859,34 @@ a.image-popup img {
     width: 100%;
     height: 250px;
 }
-a.image-popup::before {
+a.image-popup:before {
     left: -50%;
     top: 0;
 }
 
-a.image-popup::after {
+a.image-popup:after {
     right: -50%;
     top: 0;
 }
-a.image-popup::before, a.image-popup::after {
+a.image-popup:before, a.image-popup:after {
     position: absolute;
     content: "";
     width: 50%;
     height: 100%;
     background-color: #ddd;
     opacity: .8;
+    -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=80)";
+    -webkit-transition:.3s;
     transition: .3s;
 }
 a.image-popup:hover {
     cursor: crosshair;
 }
-a.image-popup:hover::before {
+a.image-popup:hover:before {
     left: 0;
     cursor: crosshair;
 }
-a.image-popup:hover::after {
+a.image-popup:hover:after {
     right: 0;
     cursor: crosshair;
 }
