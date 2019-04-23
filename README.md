@@ -1,2 +1,2 @@
 # Demo
-**[Upashi Restaurant & Party Center](https://dark-knight-hr.github.io/restaurant/index.html)**
+**[Upashi Restaurant & Party Center](https://devhabib.github.io/restaurant/index.html)**
